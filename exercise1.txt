@@ -1,5 +1,3 @@
-1a
-
 1b
 Running rbf.py prints that the regular Python version takes about 7.16 s, 
 while the Scipy version of the script takes about 0.17 s. 
@@ -18,6 +16,6 @@ Python variant. The Rbf approximation is also qhat requires the most memory.
  
 1d
 Running the naive Python version of the Rbf approximation took approx. 
-17.8 s, whereas running it using Scipy and Cython resulted in runs that
+18.8 s, whereas running it using Scipy and Cython resulted in runs that
 took approx 0.4 s and 0.3 s respectively. See the rbf_output.txt for the
 output of the rbf.py script.
