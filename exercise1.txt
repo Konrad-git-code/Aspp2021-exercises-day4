@@ -1,0 +1,23 @@
+1a
+
+1b
+Running rbf.py prints that the regular Python version takes about 7.16 s, 
+while the Scipy version of the script takes about 0.17 s. 
+
+1c
+Running rbf.py with line_profiler and @profile on the Python and Scipy
+functions shows that the Python variant spends most time on lines 15, 16 and
+18. This involves a nested loop on lines 15 and 16 calculations on the data 
+in the input X as well as using the result in fitting an exponential function
+on line 18.
+
+In the Scipy variant lines 27 and 31 are the most time consuming. The Rbf 
+module import from Scipy.inteprolate is used there, and even though most time
+is spent on running Rbf it is still much faster than the calculations in the 
+Python variant. The Rbf approximation is also qhat requires the most memory. 
+ 
+1d
+Running the naive Python version of the Rbf approximation took approx. 
+17.8 s, whereas running it using Scipy and Cython resulted in runs that
+took approx 0.4 s and 0.3 s respectively. See the rbf_output.txt for the
+output of the rbf.py script.
